@@ -17,25 +17,25 @@ modelConfiguration = os.path.join(script_directory, 'yolov3.cfg')
 modelWeight = os.path.join(script_directory, 'yolov3.weights')
 cocoNames = os.path.join(script_directory, 'coco.names')
 sirenMusic = os.path.join(script_directory, 'Siren.mp3')
-# cameraUsername = input("Enter Camera username: ")
-# cameraPassword = getpass.getpass(prompt="Enter Camera Password: ")
-# Customization of windows size as per user suitability
-# window_width, window_height = None, None
-# for i in ["window_width", "window_height"]:
-#     while True:
-#         try:
-#             windowsFrame = int(input(f"Enter {i}: "))
-#             if 100 <= windowsFrame <= 1500:
-#                 if i == "window_width":
-#                     window_width = windowsFrame
-#                     break
-#                 else:
-#                     window_height = windowsFrame
-#                     break
-#             else:
-#                 print(f"{i} must be between 100-1500")
-#         except ValueError:
-#             print("Invalid input, please enter a valid number!")
+cameraUsername = input("Enter Camera username: ")
+cameraPassword = getpass.getpass(prompt="Enter Camera Password: ")
+Customization of windows size as per user suitability
+window_width, window_height = None, None
+for i in ["window_width", "window_height"]:
+    while True:
+        try:
+            windowsFrame = int(input(f"Enter {i}: "))
+            if 100 <= windowsFrame <= 1500:
+                if i == "window_width":
+                    window_width = windowsFrame
+                    break
+                else:
+                    window_height = windowsFrame
+                    break
+            else:
+                print(f"{i} must be between 100-1500")
+        except ValueError:
+            print("Invalid input, please enter a valid number!")
 
 cameraUrl = f"rtsp://admin:1234@192.168.1.122:225/Streaming/channels/756"
 
